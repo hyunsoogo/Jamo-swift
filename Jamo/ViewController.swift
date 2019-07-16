@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //textField.delegate = self
-        textField.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
+        textField.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControl.Event.EditingChanged)
     }
     
     func textFieldDidChange(textField: UITextField){
