@@ -16,10 +16,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //textField.delegate = self
-        textField.addTarget(self, action: "textFieldDidChange:", forControlEvents: UIControlEvents.EditingChanged)
+        textField.addTarget(self, action: #selector(textFieldDidChange(textField:)), for: UIControl.Event.editingChanged)
     }
     
-    func textFieldDidChange(textField: UITextField){
+    @objc func textFieldDidChange(textField: UITextField){
         if let input = textField.text{
             label.text = Jamo.getJamo(input)
         }
